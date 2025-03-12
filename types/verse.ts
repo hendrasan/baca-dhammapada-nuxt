@@ -1,6 +1,4 @@
-export type Verses = {
-    data: Verse[]
-}
+import type { Chapter } from "./chapter"
 
 export type Verse = {
     id: number
@@ -12,4 +10,13 @@ export type Verse = {
     english_story_title: string
     story: string
     english_story: string
+    chapter?: Chapter
 }
+
+export type Verses = {
+  data: Verse[];
+};
+
+export type VerseDetail = {
+  data: Verse;
+};
