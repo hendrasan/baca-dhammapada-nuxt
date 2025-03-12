@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { Chapters } from '~/types/chapter';
 
-const { data: chapters } = await useApiFetch<Chapters>('/api/v1/chapters')
+const { data } = await useApiFetch<Chapters>('/api/v1/chapters')
+
+const chapters = data?.value?.data
 </script>
 
 <template>
@@ -22,7 +24,7 @@ const { data: chapters } = await useApiFetch<Chapters>('/api/v1/chapters')
             </div>
 
             <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <NuxtLink class="group" v-for="chapter in chapters.data" :key="chapter.id">
+                <NuxtLink class="group" v-for="chapter in chapters" :key="chapter.id" :to="{ name: 'chapters-id', params: { id: chapter.id } }">
                     <ContentCard :chapter="chapter" />
                 </NuxtLink>
             </div>

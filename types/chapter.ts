@@ -1,3 +1,5 @@
+import type { Verse } from "./verse"
+
 export type Chapters = {
     data: Chapter[]
 }
@@ -8,4 +10,8 @@ export type Chapter = {
     title: string
     english_title: string
     verses_count: number
+}
+
+export type ChapterWithVerses = {
+    data: Chapter & { verses: Verse[] }
 }
