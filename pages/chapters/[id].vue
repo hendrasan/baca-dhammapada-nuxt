@@ -18,23 +18,30 @@ if (error.value) {
 
 <template>
     <div class="py-8 space-y-8">
+        <p>
+            <Button variant="outline" as-child>
+                <NuxtLink :to="{ name: 'index' }">
+                    <icon-chevron-left class="w-4 h-4 " /> Kembali ke daftar bab</NuxtLink>
+            </Button>
+        </p>
         <section class="flex flex-col text-center gap-4">
-            <h1 class="text-3xl text-primary">{{ chapter?.title }}</h1>
+            <h1 class="text-3xl text-primary">Bab {{ chapter?.number }}: {{ chapter?.title }}</h1>
 
-            <p class="text-lg">Baca {{ chapter?.verses_count }} syair dari bab {{ chapter?.title }}.</p>
+            <!-- <p class="text-lg">Baca {{ chapter?.verses_count }} syair dari bab {{ chapter?.title }}.</p> -->
 
-            <p>
+            <!-- <p>
                 <Button as-child>
                     <NuxtLink :to="{ name: 'index' }">Lihat semua bab</NuxtLink>
                 </Button>
-            </p>
+            </p> -->
         </section>
 
         <hr />
 
         <section class="flex flex-col gap-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <NuxtLink class="group" v-for="verse in chapter?.verses" :key="verse.id" :to="{ name: 'verses-id', params: { id: verse.id } }">
+                <NuxtLink class="group" v-for="verse in chapter?.verses" :key="verse.id"
+                    :to="{ name: 'verses-id', params: { id: verse.id } }">
                     <VerseCard :verse="verse" />
                 </NuxtLink>
             </div>

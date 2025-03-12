@@ -12,13 +12,12 @@ defineProps({
 <template>
     <Card class="h-full transition-all hover:-translate-y-0.5 hover:shadow-md">
         <CardHeader>
-            <CardTitle>
-                {{ chapter.number }}.
-                {{ chapter.title }}
+            <CardTitle class="text-primary">
+                Bab {{ chapter.number }}: {{ chapter.title }}
             </CardTitle>
         </CardHeader>
         <CardContent>
-            <p class="text-muted-foreground">{{ chapter.verses_count }} syair</p>
+            <p class="">{{ chapter.verses_count }} syair</p>
         </CardContent>
     </Card>
 </template>

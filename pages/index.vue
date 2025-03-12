@@ -17,7 +17,7 @@ const chapters = data?.value?.data
         <hr />
 
         <section class="flex flex-col gap-4">
-            <h2 class="text-center text-3xl text-primary">Daftar Bab</h2>
+            <!-- <h2 class="text-center text-3xl text-primary">Daftar Bab</h2> -->
 
             <div v-if="chapters == null">
                 No data
@@ -25,7 +25,7 @@ const chapters = data?.value?.data
 
             <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <NuxtLink class="group" v-for="chapter in chapters" :key="chapter.id" :to="{ name: 'chapters-id', params: { id: chapter.id } }">
-                    <ContentCard :chapter="chapter" />
+                    <ChapterCard :chapter="chapter" />
                 </NuxtLink>
             </div>
         </section>

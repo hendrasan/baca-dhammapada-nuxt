@@ -22,13 +22,21 @@ console.log(verse)
     <div class="py-8 space-y-8">
         <p>
             <Button variant="outline" as-child>
-                <NuxtLink :to="{ name: 'chapters-id', params: { id: verse?.chapter_id } }"><icon-chevron-left class="w-4 h-4 "/> Lihat syair lain dari bab {{ verse?.chapter?.title }}</NuxtLink>
+                <NuxtLink :to="{ name: 'chapters-id', params: { id: verse?.chapter_id } }"><icon-chevron-left
+                        class="w-4 h-4 " /> Lihat syair lain dari Bab {{ verse?.chapter?.number }}: {{
+                    verse?.chapter?.title }}</NuxtLink>
             </Button>
         </p>
-        <section class="flex flex-col text-center gap-4">
-            <h2 class="text-xl">Bab {{ verse?.chapter?.title }}, Syair {{ verse?.verse_number }}</h2>
-            <div class="max-w-md mx-auto italic">
-                <h1 class="text-3xl text-primary">{{ verse?.text }}</h1>
+        <section class="flex flex-col text-center gap-6">
+            <!-- <h2 class="text-xl">Bab {{ verse?.chapter?.title }}, Syair {{ verse?.verse_number }}</h2> -->
+
+            <div>
+                <h2 class="text-3xl text-primary">Syair {{ verse?.verse_number }}</h2>
+                <p class="text-sm text-muted-foreground">Dari Bab {{ verse?.chapter?.number }}: {{ verse?.chapter?.title
+                    }}</p>
+            </div>
+            <div class="max-w-2xl mx-auto italic">
+                <h1 class="text-xl font-medium font-serif leading-normal ">{{ verse?.text }}</h1>
             </div>
         </section>
 
