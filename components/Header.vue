@@ -18,13 +18,15 @@
                             </li> -->
                             <li>
                                 <NuxtLink :to="{ name: 'index' }"
-                                    class="text-foreground/80 hover:text-primary transition-colors" active-class="text-primary">
+                                    class="text-foreground/80 hover:text-primary transition-colors"
+                                    :class="{ 'text-primary': $route.name === 'chapters-id' }" active-class="text-primary">
                                     Bab
                                 </NuxtLink>
                             </li>
                             <li>
                                 <NuxtLink :to="{ name: 'verses' }"
-                                    class="text-foreground/80 hover:text-primary transition-colors" active-class="text-primary">
+                                    class="text-foreground/80 hover:text-primary transition-colors"
+                                    :class="{ 'text-primary': $route.name === 'verses-id' }" active-class="text-primary">
                                     Syair
                                 </NuxtLink>
                             </li>
