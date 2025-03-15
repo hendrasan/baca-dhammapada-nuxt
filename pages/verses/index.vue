@@ -42,6 +42,10 @@ const handlePageChange = (newPage: number) => {
             <h1 class="text-3xl text-primary">Semua Syair Dhammapada</h1>
 
             <p class="text-lg">Baca syair-syair Dhammapada beserta cerita tentang setiap syairnya.</p>
+
+            <Button as-child class="mx-auto">
+                <NuxtLink :to="{ name: 'verses-random' }">Lihat Syair Acak</NuxtLink>
+            </Button>
         </section>
 
         <hr />
