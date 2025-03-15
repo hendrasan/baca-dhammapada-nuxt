@@ -14,8 +14,6 @@ if (error.value) {
 
     await navigateTo({ name: 'index' })
 }
-
-console.log(verse)
 </script>
 
 <template>

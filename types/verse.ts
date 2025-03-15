@@ -15,6 +15,7 @@ export type Verse = {
 
 export type Verses = {
   data: Verse[];
+  meta: any;
 };
 
 export type VerseDetail = {

@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import type { Verse } from '~/types/verse';
 
-defineProps({
-    verse: {
-        type: Object as PropType<Verse>,
-        required: true
-    }
-})
+defineProps<{ verse: Verse }>()
 </script>
 
 <template>
