@@ -85,7 +85,7 @@ const handleSearch = () => {
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <NuxtLink class="group" v-for="verse in verses" :key="verse.id"
                         :to="{ name: 'verses-id', params: { id: verse.id } }">
-                        <VerseCard :verse="verse" />
+                        <VerseCard :verse="verse" with-chapter-label />
                     </NuxtLink>
                 </div>
 
