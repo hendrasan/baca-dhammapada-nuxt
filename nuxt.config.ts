@@ -2,7 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt", "@nuxtjs/color-mode"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "shadcn-nuxt",
+    "@nuxtjs/color-mode",
+    "nuxt-gtag",
+  ],
+  gtag: {
+    id: "G-H03KF4C82T",
+  },
   colorMode: {
     classSuffix: "",
   },
