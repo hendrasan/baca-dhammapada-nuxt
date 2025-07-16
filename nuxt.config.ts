@@ -1,5 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "Baca Dhammapada",
+      htmlAttrs: {
+        lang: "id",
+      },
+      meta: [
+        {
+          name: "description",
+          content: "Baca syair-syair Dhammapada beseta cerita tentang setiap syairnya",
+        },
+        {
+          name: "og:image",
+          content: `${process.env.NUXT_PUBLIC_BASE_URL || ''}/og.jpg`,
+        }
+      ],
+    },
+  },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   modules: [
@@ -40,6 +58,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "",
       apiBaseUrl:
         process.env.NUXT_PUBLIC_API_BASE_URL ||
         "http://laravel-dhammapada-api.test",

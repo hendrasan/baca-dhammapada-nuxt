@@ -14,6 +14,11 @@ if (error.value) {
 
     await navigateTo({ name: 'index' })
 }
+
+useSeoMeta({
+    titleTemplate: `Bab ${chapter?.number}: ${chapter?.title} - %s`,
+    description: () => `Baca ${chapter?.verses_count} syair dari Dhammapada bab ${chapter?.number}: ${chapter?.title}`,
+})
 </script>
 
 <template>
