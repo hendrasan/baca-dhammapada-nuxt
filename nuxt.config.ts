@@ -2,14 +2,14 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Baca Dhammapada",
+      title: "Baca Dhammapada Online",
       htmlAttrs: {
         lang: "id",
       },
       meta: [
         {
           name: "description",
-          content: "Baca syair-syair Dhammapada beseta cerita tentang setiap syairnya",
+          content: "Baca syair-syair Dhammapada dan cerita tentang setiap syairnya online",
         },
         {
           name: "og:image",
