@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         }
       ],
     },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -39,7 +40,9 @@ export default defineNuxtConfig({
     },
   ],
   tailwindcss: {
-    cssPath: "~/assets/css/main.css",
+    cssPath: ["~/assets/css/main.css", {
+      injectPosition: 0,
+    }],
     // configPath: "tailwind.config.js",
     // exposeConfig: false,
     // config: {},
