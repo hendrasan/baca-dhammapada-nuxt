@@ -16,7 +16,7 @@ if (error.value) {
 }
 
 useSeoMeta({
-    titleTemplate: `Syair ${verse?.verse_number} dari Bab ${verse?.chapter?.number}: ${verse?.chapter?.title} - %s`,
+    titleTemplate: `Dhammapada Syair ${verse?.verse_number} dari Bab ${verse?.chapter?.number}: ${verse?.chapter?.title} - %s`,
     // title: () => `Syair ${verse?.verse_number} dari Bab ${verse?.chapter?.number}: ${verse?.chapter?.title}`,
     description: () => `Baca Dhammapada Syair ${verse?.verse_number} dari Bab ${verse?.chapter?.number}: ${verse?.chapter?.title}, beserta cerita tentang ${verse?.story_title}`,
 })
